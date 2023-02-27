@@ -8,18 +8,16 @@ function App() {
   const generateQRCode = () => {
     QRCode.toDataURL(url, {
         width: 800,
-        margin: 1
+        margin: 2
     },  (err, url) => {
         if (err) return console.error(err)
-
-        console.log(url)
         setqrCode(url)    
     })
   }
 
   return (
     <div className="app">
-      <h1>Armando's QR Code Generator</h1>
+      <h1>QuickQR Code Generator</h1>
       <input 
         type="text"
         placeholder="e.g. https://google.com"
